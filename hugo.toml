@@ -1,0 +1,17 @@
+baseURL = 'https://example.org/'
+languageCode = 'id-id'
+title = 'Muhammad Arbilly Portofolio'
+theme = "PaperMod"
+
+[params]
+    env = "production"
+    title = "Arbilly's Cloud Journey"
+    description = "Master Control & Aspiring Cloud Engineer"
+    defaultTheme = "dark"
+    showCodeCopyButtons = true
+
+    [params.profileMode]
+        enabled = true
+        title = "Muhammad Arbilly Idrus Alhabsyi"
+        subtitle = "Master Control di Broadcasting | Sedang belajar Google Cloud & DevOps"
+        imageUrl = "" 
