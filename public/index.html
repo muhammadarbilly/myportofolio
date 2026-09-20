@@ -1,183 +1,518 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta name="generator" content="Hugo 0.160.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Muhammad Arbilly Portofolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Arbilly Idrus Alhabsyi - Official Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="Master Control &amp; Aspiring Cloud Engineer">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.4ef2299ae814559c4055cd3d15919aff78737e44fa7af337c506246832ba458a.css" integrity="sha256-TvIpmugUVZxAVc09FZGa/3hzfkT6evM3xQYkaDK6RYo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/">
-<noscript>
     <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
+        body { 
+            background-color: #0f172a; 
+            color: #f8fafc; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden; 
+        }
+        
+        .bg-grid {
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-attachment: fixed;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+        .floating-delayed { animation: float 5s ease-in-out infinite 1s; }
+        
+        .shiny-card {
+            position: relative; 
+            overflow: hidden; 
+            transition: all 0.3s ease;
+            background-color: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #334155;
+        }
+        .shiny-card::before {
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: -100%; 
+            width: 50%; 
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(6, 182, 212, 0.15) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg); 
+            transition: all 0.6s ease; 
+            z-index: 1; 
+            pointer-events: none;
+        }
+        .shiny-card:hover::before { left: 200%; }
+        .shiny-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.25); 
+            border-color: #06b6d4; 
         }
 
+        .text-neon { color: #06b6d4; text-shadow: 0 0 10px rgba(6, 182, 212, 0.5); }
+        .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0891b2; }
     </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="http://localhost:1313/">
-  <meta property="og:site_name" content="Muhammad Arbilly Portofolio">
-  <meta property="og:title" content="Muhammad Arbilly Portofolio">
-  <meta property="og:description" content="Master Control &amp; Aspiring Cloud Engineer">
-  <meta property="og:locale" content="id_id">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Muhammad Arbilly Portofolio">
-  <meta name="twitter:description" content="Master Control &amp; Aspiring Cloud Engineer">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Muhammad Arbilly Portofolio",
-  "url": "http://localhost:1313/",
-  "description": "Master Control \u0026 Aspiring Cloud Engineer",
-  "logo": "http://localhost:1313/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Muhammad Arbilly Portofolio (Alt + H)">Muhammad Arbilly Portofolio</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
+<body class="bg-grid">
+
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 text-xl font-bold text-white tracking-wider flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-code-branch text-cyan-400"></i> ARBILLY<span class="text-neon">.</span>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">About</a>
+                        <a href="#skills" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Skills</a>
+                        <a href="#experience" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Experience</a>
+                        <a href="#cloud-ai" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Cloud & AI</a>
+                        <a href="#certifications" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Certifications</a>
+                        <a href="#awards" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Awards</a>
+                    </div>
+                </div>
+                <div class="lg:hidden flex items-center text-cyan-400">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </div>
             </div>
         </div>
-        <ul id="menu">
-        </ul>
     </nav>
-</header>
-<main class="main"><div class="profile">
-    <div class="profile_inner">
-        <h1>Muhammad Arbilly Idrus Alhabsyi</h1>
-        <span>Master Control di Broadcasting | Sedang belajar Google Cloud &amp; DevOps</span><div class="social-icons" >
-</div>
 
-    </div>
-</div>
+    <section id="hero" class="pt-36 pb-20 px-4 text-center relative overflow-hidden min-h-[90vh] flex flex-col justify-center items-center">
+        <div class="absolute top-1/4 left-[10%] text-cyan-400/5 text-9xl floating pointer-events-none -z-10"><i class="fa-solid fa-cloud"></i></div>
+        <div class="absolute bottom-1/4 right-[10%] text-blue-500/5 text-9xl floating-delayed pointer-events-none -z-10"><i class="fa-solid fa-network-wired"></i></div>
 
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Muhammad Arbilly Portofolio</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+        <div class="floating text-6xl text-cyan-400 mb-6 drop-shadow-[0_0_15px_rgba(6,182,212,0.6)]">
+            <i class="fa-solid fa-satellite-dish"></i>
+        </div>
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight text-white" data-aos="fade-up">
+            Muhammad Arbilly <br><span class="text-3xl md:text-5xl lg:text-6xl text-slate-300">Idrus Alhabsyi</span>
+        </h1>
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+        <h2 class="text-xl md:text-3xl text-slate-400 mb-6 font-light" data-aos="fade-up" data-aos-delay="100">
+            Broadcast Engineer | <span class="text-neon font-semibold">AI & Cloud Enthusiast</span> | IT Support
+        </h2>
+        
+        <!-- Profile Links & Location -->
+        <div class="flex justify-center gap-4 text-slate-300 mb-8 text-sm md:text-base flex-wrap max-w-4xl mx-auto px-2" data-aos="fade-up" data-aos-delay="150">
+            <span class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700"><i class="fa-solid fa-location-dot text-cyan-400"></i> Palembang, ID</span>
+            <a href="https://github.com/muhammadarbilly" target="_blank" class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 transition"><i class="fa-brands fa-github text-cyan-400"></i> GitHub</a>
+            <a href="https://linkedin.com/in/muhammadarbilly" target="_blank" class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 transition"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
+            <a href="https://www.credly.com/users/muhammadarbilly" target="_blank" class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 transition"><i class="fa-solid fa-certificate text-cyan-400"></i> Credly</a>
+            <a href="https://www.skills.google/public_profiles/d2915568-675a-4e57-8c5e-16e4efb90295" target="_blank" class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 transition"><i class="fa-brands fa-google text-cyan-400"></i> Google Skills</a>
+            <a href="https://learn.microsoft.com/id-id/users/muhammadarbilly/" target="_blank" class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 transition"><i class="fa-brands fa-microsoft text-blue-400"></i> MS Learn (Lvl 10)</a>
+        </div>
+        
+        <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="#about" class="bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-bold py-3 px-8 rounded-full transition-all duration-300">
+                Explore Profile
+            </a>
+            <a href="mailto:muhammadarbilly@gmail.com" class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold py-3 px-8 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all duration-300">
+                Contact via Email <i class="fa-solid fa-envelope ml-1"></i>
+            </a>
+        </div>
+    </section>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
+    <section id="about" class="py-16 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h3 class="text-3xl font-bold mb-8 text-white">About <span class="text-neon">Me</span></h3>
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed glass-panel p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                I am a dedicated professional merging operational expertise in <strong>Broadcasting and IT Infrastructure</strong> with a profound passion for <strong>Cloud Computing and Artificial Intelligence</strong>. With a proven track record as a Master Control Operator at PT. Sriwijaya Palembang Televisi and a Google Cloud Facilitator, I thrive in dynamic environments where precision meets innovation. I continuously expand my capabilities across platforms like Microsoft Azure (Level 10 Microsoft Learn) and Google Cloud to design scalable, intelligent technical solutions.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical <span class="text-neon">Skills</span></h3>
+            <div class="h-1 w-24 bg-cyan-400 mx-auto rounded-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in">
+                <i class="fa-solid fa-tower-broadcast text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Broadcasting</h4>
+                <p class="text-sm text-slate-400">vMix, OBS Studio, Blackmagicdesign, Live Streaming, Switching, CG</p>
+            </div>
+            
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-cloud text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Cloud Computing</h4>
+                <p class="text-sm text-slate-400">Google Cloud Platform, Microsoft Azure, Huawei Cloud, Terraform, GKE</p>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-network-wired text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Networking</h4>
+                <p class="text-sm text-slate-400">MikroTik (MTCNA, MTCWE), Cisco CCNA Concepts, Hardware Troubleshooting</p>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-microchip text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Artificial Intelligence</h4>
+                <p class="text-sm text-slate-400">Gemini, Document AI, Azure AI Foundry, RAG, Prompt Engineering, Semantic Kernel</p>
+            </div>
+            
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-solid fa-code text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Programming & Web</h4>
+                <p class="text-sm text-slate-400">C, C++, Java, PHP, HTML, CSS, Tailwind, JavaScript, Full-Stack Development</p>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-database text-5xl text-cyan-400 mb-4"></i>
+                <h4 class="font-bold text-xl text-white mb-2">Data & Operations</h4>
+                <p class="text-sm text-slate-400">BigQuery, Dataproc, Accurate, Bigseller, Premiere Pro, Photoshop</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-slate-900/50 border-y border-slate-800 relative z-10">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Work <span class="text-neon">Experience</span></h3>
+                <div class="h-1 w-24 bg-cyan-400 mx-auto rounded-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Job: Sriwijaya TV -->
+                <div class="shiny-card p-6 md:p-8 rounded-2xl" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4 border-b border-slate-700 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-tv text-2xl text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Master Control Operator (Broadcast Engineer)</h4>
+                                <p class="text-cyan-400 text-sm font-semibold">PT. Sriwijaya Palembang Televisi</p>
+                            </div>
+                        </div>
+                        <span class="bg-cyan-900/30 border border-cyan-500/30 text-cyan-300 text-xs px-4 py-2 rounded-full whitespace-nowrap">Mar 2018 - Present</span>
+                    </div>
+                    <ul class="text-slate-400 text-sm leading-relaxed space-y-2 list-disc list-inside">
+                        <li>Manage and monitor live television broadcasts from the Master Control Room, ensuring seamless transitions and audio/video quality.</li>
+                        <li>Successfully migrated broadcasting servers to vMix, heavily optimizing the daily workflow.</li>
+                        <li>Developed a standalone HTML-based character generator (CG) for running texts and overlays.</li>
+                        <li>Operated technical systems for massive off-air events (e.g., KPID Award 2020, Regional Elections 2024).</li>
+                        <li>Awarded <strong>Karyawan Terdisiplin</strong> in 2019 for outstanding discipline and work ethic.</li>
+                    </ul>
+                </div>
+
+                <!-- Job: Google Cloud -->
+                <div class="shiny-card p-6 md:p-8 rounded-2xl border-l-4 border-l-blue-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4 border-b border-slate-700 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-brands fa-google text-2xl text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Google Cloud Facilitator</h4>
+                                <p class="text-blue-400 text-sm font-semibold">Google Cloud x Dicoding Indonesia</p>
+                            </div>
+                        </div>
+                        <span class="bg-blue-900/30 border border-blue-500/30 text-blue-300 text-xs px-4 py-2 rounded-full whitespace-nowrap">2026</span>
+                    </div>
+                    <ul class="text-slate-400 text-sm leading-relaxed space-y-2 list-disc list-inside">
+                        <li>Mentored and guided community participants through the Google Cloud Skills Arcade 2026 program.</li>
+                        <li>Facilitated hands-on labs focusing on foundational Cloud Computing, Generative AI, and Data Engineering.</li>
+                        <li>Cultivated an active, supportive learning community, driving participants to complete challenges and achieve milestones.</li>
+                    </ul>
+                </div>
+                
+                <!-- Job: Gallery Sriwijaya -->
+                <div class="shiny-card p-6 md:p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4 border-b border-slate-700 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-boxes-stacked text-2xl text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">IT Support & Data Entry</h4>
+                                <p class="text-cyan-400 text-sm font-semibold">Gallery Sriwijaya</p>
+                            </div>
+                        </div>
+                        <span class="bg-slate-700 border border-slate-500 text-slate-300 text-xs px-4 py-2 rounded-full whitespace-nowrap">Sep 2023 - Mar 2024</span>
+                    </div>
+                    <ul class="text-slate-400 text-sm leading-relaxed space-y-2 list-disc list-inside">
+                        <li>Managed offline and marketplace online inventory databases using accounting software platforms.</li>
+                        <li>Compiled precise sales reports and managed barcode generation for product tracking.</li>
+                        <li>Provided reliable IT operations support ensuring smooth daily administrative tasks.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cloud-ai" class="py-20 max-w-6xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Cloud & AI <span class="text-neon">Achievements</span></h3>
+            <div class="h-1 w-24 bg-cyan-400 mx-auto rounded-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+            <p class="mt-6 text-slate-400 max-w-2xl mx-auto">Verified credentials representing hundreds of hours of hands-on technical labs, cloud architecture design, and AI model deployments.</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Microsoft Learn -->
+            <div class="shiny-card p-8 rounded-2xl border-t-4 border-t-blue-500 flex flex-col h-full bg-gradient-to-b from-blue-900/10 to-transparent" data-aos="fade-right">
+                <div class="flex items-center justify-between mb-6">
+                    <i class="fa-brands fa-microsoft text-5xl text-blue-500"></i>
+                    <div class="text-right">
+                        <h4 class="text-2xl font-bold text-white">Microsoft Learn</h4>
+                        <p class="text-yellow-400 font-bold text-lg"><i class="fa-solid fa-trophy mr-1"></i> Level 10</p>
+                        <p class="text-blue-300 text-xs font-mono bg-blue-900/50 px-2 py-1 rounded inline-block mt-1">108,475 XP</p>
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-slate-300 text-sm font-medium mb-3 border-b border-slate-700 pb-2">Key Competencies Verified:</p>
+                    <ul class="text-slate-400 text-sm space-y-3">
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-400 mt-1 mr-3"></i> <span>Developed Retrieval-Augmented Generation (RAG) solutions with <strong>Azure AI Foundry</strong> and Azure AI Search.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-400 mt-1 mr-3"></i> <span>Engineered generative AI applications utilizing <strong>Prompt Flow</strong> and Semantic Kernel.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-400 mt-1 mr-3"></i> <span>Programmed custom agents and copilots with <strong>Azure AI Foundry SDK</strong> and Computer Vision solutions.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-400 mt-1 mr-3"></i> <span>Mastered core Azure architecture, document intelligence, and cloud fundamentals.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Cloud -->
+            <div class="shiny-card p-8 rounded-2xl border-t-4 border-t-green-500 flex flex-col h-full bg-gradient-to-b from-green-900/10 to-transparent" data-aos="fade-left" data-aos-delay="100">
+                <div class="flex items-center justify-between mb-6">
+                    <i class="fa-brands fa-google text-5xl text-green-500"></i>
+                    <div class="text-right">
+                        <h4 class="text-2xl font-bold text-white">Google Skills Boost</h4>
+                        <p class="text-green-400 font-bold text-lg"><i class="fa-solid fa-medal mr-1"></i> Level 1 & 2</p>
+                        <p class="text-green-300 text-xs font-mono bg-green-900/50 px-2 py-1 rounded inline-block mt-1">Multiple Skill Badges</p>
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-slate-300 text-sm font-medium mb-3 border-b border-slate-700 pb-2">Key Competencies Verified:</p>
+                    <ul class="text-slate-400 text-sm space-y-3">
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i> <span><strong>Level 1: Application Design & Delivery:</strong> Implemented infrastructure via <strong>Terraform</strong> and deployed apps on <strong>GKE (Kubernetes)</strong>.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i> <span><strong>Level 2: Building with Cloud Tools:</strong> Automated data capture using <strong>Document AI</strong> and Python. Data processing via Dataproc.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i> <span>Analyzed data and trained ML models leveraging BigQuery ML.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i> <span>Leveraged <strong>Gemini</strong> for Cloud Architecture, Network Engineering, and Multimodal inspections.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20 bg-slate-900/30 border-y border-slate-800 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Licenses & <span class="text-neon">Certifications</span></h3>
+                <div class="h-1 w-24 bg-cyan-400 mx-auto rounded-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Cert 1 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">HCIA Cloud Service</h4>
+                        <i class="fa-solid fa-cloud text-xl text-cyan-500"></i>
+                    </div>
+                    <p class="text-xs text-cyan-400 font-semibold mb-2">Komdigi & Huawei | FGA 2025</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">40 Jam Pelatihan</p>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">AI Intermediate: AI Track</h4>
+                        <i class="fa-solid fa-brain text-xl text-purple-400"></i>
+                    </div>
+                    <p class="text-xs text-purple-400 font-semibold mb-2">Komdigi & MySkill | PROA 2025</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">14.4 Jam Pelatihan</p>
+                </div>
+                
+                <!-- Cert 3 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">CCNA Network Engineer</h4>
+                        <i class="fa-solid fa-network-wired text-xl text-blue-400"></i>
+                    </div>
+                    <p class="text-xs text-blue-400 font-semibold mb-2">Kominfo & Cisco | PROA 2022</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">290 Jam Pelatihan</p>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">AI Engineer For Milenial</h4>
+                        <i class="fa-solid fa-microchip text-xl text-cyan-400"></i>
+                    </div>
+                    <p class="text-xs text-cyan-400 font-semibold mb-2">Komdigi | Micro Skill 2025</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">1 Jam Pelatihan</p>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">Mini Class Mikrotik</h4>
+                        <i class="fa-solid fa-wifi text-xl text-red-400"></i>
+                    </div>
+                    <p class="text-xs text-red-400 font-semibold mb-2">ID-Networkers | IDN.ID</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">Valid till 22-07-2027</p>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="250">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">Full-Stack Web Dev</h4>
+                        <i class="fa-solid fa-code text-xl text-green-400"></i>
+                    </div>
+                    <p class="text-xs text-green-400 font-semibold mb-2">Harisenin.com</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">Simulasi Kerja (SiM-K)</p>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">Web Dev Series 3.0</h4>
+                        <i class="fa-brands fa-html5 text-xl text-orange-400"></i>
+                    </div>
+                    <p class="text-xs text-orange-400 font-semibold mb-2">Dibimbing.id</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">Intensive Web Programming</p>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="350">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">MTCNA</h4>
+                        <i class="fa-solid fa-server text-xl text-slate-400"></i>
+                    </div>
+                    <p class="text-xs text-slate-300 font-semibold mb-2">MikroTik Certified Network Associate</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">Certified 2017</p>
+                </div>
+
+                <!-- Cert 9 -->
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-white text-lg">MTCWE</h4>
+                        <i class="fa-solid fa-broadcast-tower text-xl text-slate-400"></i>
+                    </div>
+                    <p class="text-xs text-slate-300 font-semibold mb-2">MikroTik Certified Wireless Engineer</p>
+                    <p class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded inline-block">Certified 2017</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="py-20 max-w-6xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Awards & <span class="text-neon">Leadership</span></h3>
+            <div class="h-1 w-24 bg-cyan-400 mx-auto rounded-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="shiny-card p-6 rounded-xl flex items-start gap-4" data-aos="fade-right">
+                <div class="bg-yellow-500/20 p-3 rounded-full border border-yellow-500/50 flex-shrink-0">
+                    <i class="fa-solid fa-robot text-2xl text-yellow-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">Kontes Robot Indonesia (KRI) 2015</h4>
+                    <p class="text-cyan-400 text-xs font-semibold mb-2">Regional 1 Sumatera | Divisi KRPAI Beroda</p>
+                    <p class="text-sm text-slate-400">Competed as a core team member representing STMIK MDP with the robot team <strong>TECH-ONE V2</strong>.</p>
+                </div>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex items-start gap-4" data-aos="fade-left">
+                <div class="bg-purple-500/20 p-3 rounded-full border border-purple-500/50 flex-shrink-0">
+                    <i class="fa-solid fa-palette text-2xl text-purple-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">Indonesia Skills Competition XI 2015</h4>
+                    <p class="text-cyan-400 text-xs font-semibold mb-2">Sumatera Selatan Region</p>
+                    <p class="text-sm text-slate-400">Competitor in the <strong>Graphic Design</strong> category, showcasing proficiency in visual arts and design software.</p>
+                </div>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex items-start gap-4" data-aos="fade-right" data-aos-delay="100">
+                <div class="bg-green-500/20 p-3 rounded-full border border-green-500/50 flex-shrink-0">
+                    <i class="fa-solid fa-award text-2xl text-green-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">Karyawan Terdisiplin</h4>
+                    <p class="text-cyan-400 text-xs font-semibold mb-2">PT. Sriwijaya Palembang Televisi | 2019</p>
+                    <p class="text-sm text-slate-400">Awarded the "Most Disciplined Employee" title for outstanding dedication, punctuality, and operational responsibility.</p>
+                </div>
+            </div>
+
+            <div class="shiny-card p-6 rounded-xl flex items-start gap-4" data-aos="fade-left" data-aos-delay="100">
+                <div class="bg-blue-500/20 p-3 rounded-full border border-blue-500/50 flex-shrink-0">
+                    <i class="fa-solid fa-users text-2xl text-blue-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">Ketua HIMTI (Student Council President)</h4>
+                    <p class="text-cyan-400 text-xs font-semibold mb-2">STMIK Global Informatika MDP | 2016 - 2017</p>
+                    <p class="text-sm text-slate-400">Led the Informatics Engineering Student Association, coordinating campus events, driving student engagement, and fostering technical communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 mb-10 max-w-4xl mx-auto px-4 relative z-10">
+        <h3 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Academic <span class="text-neon">Background</span></h3>
+        
+        <div class="relative border-l-2 border-cyan-500/50 ml-3 md:ml-6 space-y-10">
+            <div class="relative pl-8" data-aos="fade-up">
+                <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,1)]"></div>
+                <div class="glass-panel p-6 rounded-xl border border-slate-700">
+                    <h4 class="text-xl font-bold text-white">S-1 Teknik Informatika (Konsentrasi Jaringan Komputer)</h4>
+                    <p class="text-cyan-400 font-semibold text-sm mt-1">STMIK Global Informatika Multi Data Palembang (MDP)</p>
+                    <p class="text-slate-500 text-xs mt-2 bg-slate-800/80 inline-block px-3 py-1 rounded-full">2013 - 2017</p>
+                    <p class="text-slate-400 text-sm mt-4">Focused on computer networking concentration, software engineering, and systems administration. Served as President of HIMTI (2016-2017).</p>
+                </div>
+            </div>
+
+            <div class="relative pl-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-500"></div>
+                <div class="glass-panel p-6 rounded-xl border border-slate-700">
+                    <h4 class="text-xl font-bold text-white">Teknik Komputer dan Jaringan (TKJ)</h4>
+                    <p class="text-slate-400 font-semibold text-sm mt-1">SMK Negeri 4 Palembang</p>
+                    <p class="text-slate-500 text-xs mt-2 bg-slate-800/80 inline-block px-3 py-1 rounded-full">2010 - 2013</p>
+                    <p class="text-slate-400 text-sm mt-4">Built strong foundational skills in computer networking, hardware configuration, and system troubleshooting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-center relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white tracking-widest mb-4">ARBILLY<span class="text-cyan-400">.</span></h2>
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="https://github.com/muhammadarbilly" class="text-slate-400 hover:text-cyan-400 text-xl transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/muhammadarbilly" class="text-slate-400 hover:text-cyan-400 text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:muhammadarbilly@gmail.com" class="text-slate-400 hover:text-cyan-400 text-xl transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Muhammad Arbilly Idrus Alhabsyi (muhammadarbilly.com). All Rights Reserved. <br>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
         });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+    </script>
 </body>
-
 </html>
