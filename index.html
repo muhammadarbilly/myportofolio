@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Muhammad Arbilly Idrus Alhabsyi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* Grid Background & Floating Animation */
+        .bg-grid {
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+        
+        /* Shiny Card Hover */
+        .shiny-card {
+            position: relative; overflow: hidden; transition: all 0.3s ease;
+        }
+        .shiny-card::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(6, 182, 212, 0.2) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg); transition: all 0.5s ease;
+        }
+        .shiny-card:hover::before { left: 150%; }
+        .shiny-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(6, 182, 212, 0.2); border-color: #06b6d4; }
+
+        .text-neon { color: #06b6d4; text-shadow: 0 0 10px rgba(6, 182, 212, 0.5); }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-grid">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 text-xl font-bold text-white tracking-wider">M. ARBILLY</div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#profil" class="hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Profil</a>
+                        <a href="#pekerjaan" class="hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Pekerjaan</a>
+                        <a href="#kompetisi" class="hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Kompetisi</a>
+                        <a href="#cloud-ai" class="hover:text-cyan-400 px-3 py-2 text-sm font-medium transition text-cyan-300">Cloud & AI</a>
+                        <a href="#sertifikat" class="hover:text-cyan-400 px-3 py-2 text-sm font-medium transition">Sertifikat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 px-4 text-center">
+        <div class="floating text-5xl text-cyan-400 mb-6"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight" data-aos="fade-up">Muhammad Arbilly <br><span class="text-3xl md:text-5xl text-slate-300">Idrus Alhabsyi</span></h1>
+        <h2 class="text-xl md:text-2xl text-slate-400 mb-6" data-aos="fade-up" data-aos-delay="100">
+            Broadcast Engineer | AI & Cloud Enthusiast | IT Support
+        </h2>
+        
+        <!-- Profile Badge Links -->
+        <div class="flex flex-wrap justify-center gap-3 text-slate-300 mb-8 text-sm" data-aos="fade-up" data-aos-delay="150">
+            <span><i class="fa-solid fa-location-dot text-cyan-400"></i> Palembang</span>
+            <a href="https://github.com/muhammadarbilly" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full transition flex items-center gap-1.5"><i class="fa-brands fa-github text-cyan-400"></i> GitHub</a>
+            <a href="https://linkedin.com/in/muhammadarbilly" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full transition flex items-center gap-1.5"><i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn</a>
+            <a href="https://www.credly.com/users/muhammadarbilly/badges/credly" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full transition flex items-center gap-1.5"><i class="fa-solid fa-certificate text-cyan-400"></i> Credly</a>
+            <a href="https://www.skills.google/public_profiles/d2915568-675a-4e57-8c5e-16e4efb90295" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full transition flex items-center gap-1.5"><i class="fa-brands fa-google text-cyan-400"></i> Google Skills</a>
+            <a href="https://learn.microsoft.com/id-id/users/muhammadarbilly/" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full transition flex items-center gap-1.5"><i class="fa-brands fa-microsoft text-cyan-400"></i> Microsoft Learn</a>
+        </div>
+
+        <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="#profil" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold py-3 px-6 rounded-full transition">Explore Profil</a>
+            <a href="mailto:muhammadarbilly@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.4)] transition">Contact via Email</a>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="profil" class="py-12 max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+        <h3 class="text-2xl font-bold mb-6 text-neon">Tentang Saya</h3>
+        <p class="text-slate-300 leading-relaxed glass-panel p-6 rounded-xl border border-slate-700">
+            Profesional berpengalaman di bidang Penyiaran, Jaringan, dan Infrastruktur IT dengan fokus kuat pada pengembangan teknologi Cloud Computing dan Artificial Intelligence (AI). Memiliki rekam jejak sebagai Master Control Operator dan Google Cloud Facilitator, saya terus memperluas keahlian melalui platform seperti Microsoft Learn dan Google Skills untuk menghadirkan solusi teknologi yang inovatif dan terukur.
+        </p>
+    </section>
+
+    <!-- Riwayat Pekerjaan -->
+    <section id="pekerjaan" class="py-16 max-w-5xl mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-10 text-center border-b border-slate-700 pb-4 text-neon">Riwayat Pekerjaan</h3>
+        <div class="space-y-6">
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Master Control Operator</h4>
+                        <p class="text-cyan-400 text-sm font-semibold">PT. Sriwijaya Palembang Televisi</p>
+                    </div>
+                    <span class="bg-slate-700 text-xs px-3 py-1 rounded-full text-slate-300">Mar 2018 - Saat ini</span>
+                </div>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                    Bertanggung jawab dalam mengelola siaran televisi di Master Control Room, pengaturan jadwal program, monitoring kualitas siaran, pengelolaan grafik layar, switching kamera live, audio, dan live streaming. <br>
+                    <span class="text-yellow-400 inline-block mt-2"><i class="fa-solid fa-star"></i> Predikat Karyawan Terdisiplin Tahun 2019</span>
+                </p>
+            </div>
+            
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Google Cloud Facilitator</h4>
+                        <p class="text-cyan-400 text-sm font-semibold">Google Cloud x Dicoding Indonesia</p>
+                    </div>
+                    <span class="bg-slate-700 text-xs px-3 py-1 rounded-full text-slate-300">2026</span>
+                </div>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                    Mendampingi peserta dalam program Google Cloud Skills Arcade 2026. Fokus pada dasar-dasar Cloud Computing, AI, dan Data Engineering.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">IT Support & Data Entry</h4>
+                        <p class="text-cyan-400 text-sm font-semibold">Gallery Sriwijaya</p>
+                    </div>
+                    <span class="bg-slate-700 text-xs px-3 py-1 rounded-full text-slate-300">Sep 2023 - Mar 2024</span>
+                </div>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                    Pengelolaan data produk pada software akuntansi, manajemen stok offline/online di marketplace, penyusunan laporan penjualan, pembuatan barcode produk, serta tugas administratif IT lainnya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan & Organisasi -->
+    <section id="pendidikan" class="py-16 max-w-5xl mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-10 text-center border-b border-slate-700 pb-4 text-neon">Pendidikan & Organisasi</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <h4 class="text-xl font-bold text-slate-300 mb-4"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i> Akademis</h4>
+                <div class="glass-panel p-5 rounded-lg border-l-4 border-cyan-500" data-aos="fade-right">
+                    <h5 class="font-bold text-white">S-1 Teknik Informatika (Konsentrasi Jaringan Komputer)</h5>
+                    <p class="text-sm text-slate-400">STMIK Global Informatika Multi Data Palembang (MDP)</p>
+                    <p class="text-xs text-cyan-400 mt-1">2013 - 2017</p>
+                </div>
+                <div class="glass-panel p-5 rounded-lg border-l-4 border-slate-500" data-aos="fade-right" data-aos-delay="100">
+                    <h5 class="font-bold text-white">Teknik Komputer dan Jaringan (TKJ)</h5>
+                    <p class="text-sm text-slate-400">SMK Negeri 4 Palembang</p>
+                    <p class="text-xs text-cyan-400 mt-1">2010 - 2013</p>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-xl font-bold text-slate-300 mb-4"><i class="fa-solid fa-users text-cyan-400 mr-2"></i> Organisasi</h4>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card h-full" data-aos="fade-left">
+                    <div class="text-4xl text-cyan-400 mb-4"><i class="fa-solid fa-sitemap"></i></div>
+                    <h5 class="text-lg font-bold text-white">Ketua Himpunan Mahasiswa (HIMTI)</h5>
+                    <p class="text-sm text-slate-400">Program Studi Teknik Informatika, STMIK MDP</p>
+                    <p class="text-xs bg-cyan-900/50 text-cyan-300 inline-block px-2 py-1 rounded mt-2">Periode 2016 - 2017</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetisi -->
+    <section id="kompetisi" class="py-16 max-w-5xl mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-10 text-center border-b border-slate-700 pb-4 text-neon">Kompetisi & Penghargaan</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="fade-right">
+                <i class="fa-solid fa-robot text-4xl text-cyan-400 mb-4"></i>
+                <h4 class="text-xl font-bold text-white">Kontes Robot Indonesia (KRI)</h4>
+                <p class="text-cyan-400 text-sm mb-2">Regional 1 Sumatera | Mei 2015</p>
+                <p class="text-slate-400 text-sm">Peserta pada Divisi Kontes Robot Pemadam Api Indonesia (KRPAI) Beroda. Berkompetisi bersama tim TECH-ONE V2 mewakili STMIK MDP.</p>
+            </div>
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="fade-left">
+                <i class="fa-solid fa-pen-nib text-4xl text-cyan-400 mb-4"></i>
+                <h4 class="text-xl font-bold text-white">Indonesia Skills Competition XI</h4>
+                <p class="text-cyan-400 text-sm mb-2">Provinsi Sumatera Selatan | 2015</p>
+                <p class="text-slate-400 text-sm">Peserta Seleksi Daerah Calon Kompetitor Kejuruan Design Grafis yang diselenggarakan oleh Balai Latihan Kerja Industri Sumatera Selatan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud & AI Badges -->
+    <section id="cloud-ai" class="py-16 max-w-5xl mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-10 text-center border-b border-slate-700 pb-4 text-neon">Cloud & AI Achievements</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="zoom-in">
+                <div class="flex items-center gap-4 mb-4">
+                    <i class="fa-brands fa-microsoft text-4xl text-cyan-400"></i>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Microsoft Learn Profile</h4>
+                        <p class="text-yellow-400 text-sm font-semibold"><i class="fa-solid fa-trophy"></i> Tingkat 10 (108.475 XP)</p>
+                    </div>
+                </div>
+                <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
+                    <li>Solusi berbasis RAG dengan Azure AI Foundry.</li>
+                    <li>Pengembangan aplikasi model bahasa (Prompt Flow).</li>
+                    <li>Pengembangan aplikasi AI dengan Azure AI Foundry SDK.</li>
+                </ul>
+            </div>
+            
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shiny-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flex items-center gap-4 mb-4">
+                    <i class="fa-brands fa-google text-4xl text-cyan-400"></i>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Google Cloud Skills Boost</h4>
+                        <p class="text-cyan-400 text-sm font-semibold"><i class="fa-solid fa-cloud"></i> Level 1 & Level 2 Achieved</p>
+                    </div>
+                </div>
+                <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
+                    <li><b>Level 1:</b> Application Design & Delivery (GKE, Terraform, Kubernetes).</li>
+                    <li><b>Level 2:</b> Building with Cloud Tools (Document AI, Python, Flutter, Dataproc).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sertifikasi & Pelatihan -->
+    <section id="sertifikat" class="py-16 max-w-6xl mx-auto px-4 mb-20">
+        <h3 class="text-3xl font-bold mb-10 text-center border-b border-slate-700 pb-4 text-neon">Sertifikasi & Pelatihan</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up">
+                <h4 class="font-bold text-white mb-1">HCIA Cloud Service</h4>
+                <p class="text-xs text-cyan-400 mb-2">Komdigi & Huawei | FGA 2025</p>
+                <p class="text-xs text-slate-400">Pelatihan komprehensif teknologi Cloud Computing selama 40 Jam Pelatihan.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="50">
+                <h4 class="font-bold text-white mb-1">AI Intermediate: AI Track</h4>
+                <p class="text-xs text-cyan-400 mb-2">Komdigi & MySkill | PROA 2025</p>
+                <p class="text-xs text-slate-400">Penyelesaian program Professional Academy AI Intermediate.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-bold text-white mb-1">CCNA Network Engineer</h4>
+                <p class="text-xs text-cyan-400 mb-2">Kominfo & Cisco | PROA 2022</p>
+                <p class="text-xs text-slate-400">Sertifikasi intensif jaringan CCNA sejumlah 290 jam pelatihan.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="150">
+                <h4 class="font-bold text-white mb-1">AI Engineer For Milenial</h4>
+                <p class="text-xs text-cyan-400 mb-2">Komdigi | Micro Skill 2025</p>
+                <p class="text-xs text-slate-400">Pelatihan optimasi AI dan Prompt yang tepat.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-bold text-white mb-1">Mini Class Mikrotik</h4>
+                <p class="text-xs text-cyan-400 mb-2">ID-Networkers | Valid till 2027</p>
+                <p class="text-xs text-slate-400">Training komprehensif administrasi Mikrotik.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="250">
+                <h4 class="font-bold text-white mb-1">Full-Stack Web Developer</h4>
+                <p class="text-xs text-cyan-400 mb-2">Harisenin.com</p>
+                <p class="text-xs text-slate-400">Simulasi Kerja (SiM-K) pengembangan web Full-Stack.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shiny-card" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-bold text-white mb-1">Web Development Series 3.0</h4>
+                <p class="text-xs text-cyan-400 mb-2">Dibimbing.id</p>
+                <p class="text-xs text-slate-400">Program intensif pengembangan Web.</p>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 flex justify-between items-center shiny-card" data-aos="fade-up" data-aos-delay="350">
+                <div>
+                    <h4 class="font-bold text-white mb-1">MTCWE & MTCNA</h4>
+                    <p class="text-xs text-cyan-400">MikroTik Certified | 2017</p>
+                </div>
+                <i class="fa-solid fa-network-wired text-3xl text-slate-500"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 text-center text-slate-500 border-t border-slate-800">
+        <p>&copy; 2026 Muhammad Arbilly Idrus Alhabsyi. All Rights Reserved. Contact: muhammadarbilly@gmail.com</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
